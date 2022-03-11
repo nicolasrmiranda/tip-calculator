@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator app</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="container">
+            <div class="left">
+                <article class="amount">
+                    <p class="text-bill">Bill</p>
+                    <input type="text" class="bill" placeholder="0" id="bill">
+                </article>
+
+                <article class="tips">
+                    <p class="text">Select tip %</p>
+                    <div class="first">
+                        <div id="five-pct" onclick="fivePct()">5%</div>
+                        <div id="ten-pct" onclick="tenPct()">
+                            <p>10%</p>
+                        </div>
+                        <div class="no-padding" onclick="fifteenPct()">
+                            <p>15%</p>
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div onclick="twentyFivePct()">
+                            <p>25%</p>
+                        </div>
+                        <div onclick="fiftyPct()">
+                            <p>50%</p>
+                        </div>
+                        <div class="btn-input" onkeyup="calcular()">
+                            <input type="text" class="insert-tip" placeholder="Custom" id="customValue">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="number-people">
+                    <div>
+                        <p class="number-p">Number of People</p>
+                        <p class="cant" id="cant">Can't be zero</p>
+                    </div>
+                    <input type="text" class="insert-number-people" placeholder="0" id="numberPeoples">
+                </article>
+            </div>
+            <div class="right">
+                    <div class="tip-amount">
+                        <div>
+                            <h3>Tip Amount</h3>
+                            <p>/ person</p>
+                        </div>
+                        <div>
+                            <h1 id="tipAmount">$0.00</h1>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div>
+                            <h3>Total</h3>
+                            <p>/ person</p>
+                        </div>
+                        <div>
+                            <h1 id="total">$0.00</h1>
+                        </div>
+                    </div>
+                <button class="reset-btn" id="btn" onclick="reset()"><p>RESET</p></button>
+            </div>
+        </section>
+        <footer>
+            <p>Desenvolved by Nícolas Miranda</p>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
